@@ -18,12 +18,14 @@
 
 #### Implementations
 
++ `RepositoryConfiguration` class is created for using `RevisionRepository` with `JpaRepository`.
+
 + `Customer` domain class is created, and annotated with `@Audited` to enable hibernate-envers' auditing feature. 
 
-+ `CustomerRepository` is extended by `RevisionRepository` in addition to standard `JpaRepository`. RevisionRepository allows fetching an entity's audit logs easily.
-https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/history/RevisionRepository.html
++ `CustomerRepository` is extended by `RevisionRepository` in addition to standard `JpaRepository`. RevisionRepository allows fetching an entity's audit logs easily. [Documentation @ docs.spring.io ](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/history/RevisionRepository.html)
 
 #### Endpoints
+
 + `GET` `/customer` returns existing customer list
 + `GET` `/customer/{id}` returns customer with specified id parameter
 + `GET` `/customer/{id}/audit` returns the audit history of customer with specified id parameter
